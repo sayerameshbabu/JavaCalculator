@@ -18,9 +18,5 @@ public class CalculatorTest {
         assertEquals(cal.subFucn(2, 3),1);
     }
     
-    @Test
-    public void threeXThreeIsNine() throws Exception {
-        assertEquals(cal.mulFucn(3, 3), 9);
-    }
    
 }
