@@ -12,6 +12,9 @@ pipeline{
     }
     stage("build"){
       steps{
+        script{
+          GV.buildApp()
+        }
         echo "building.."
       }
     }
