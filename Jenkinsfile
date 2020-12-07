@@ -7,6 +7,7 @@ pipeline{
   parameters{
     booleanParam(name:'executeTests',defaultValue:true, description:"enter true or false")
     booleanParam(name:'executeCommand',defaultValue:false, description: 'enter true or false')
+    string(name:SAMEERA,defaultValue:'male',description:"enter the gender")
   }
   stages{
     stage("test.."){
@@ -35,7 +36,8 @@ pipeline{
     }
     stage("deploy.."){
       steps{
-      echo "deplying"
+        echo"${params.SAMEERA}"
+        echo "deplying"
       }
     }
   }
