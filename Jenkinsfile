@@ -13,7 +13,7 @@ pipeline{
         echo "${GITHUB_CREDENTIALS}"
       
         withCredentials([usernamePassword(credentialsId:'git',usernameVariable:USER,passwordVariable:PWD)]){
-          echo "${USER}"
+          echo "${PWD}"
         
         }
       }
