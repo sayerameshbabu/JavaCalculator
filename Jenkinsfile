@@ -22,7 +22,14 @@ pipeline{
     }
     stage("build.."){
       steps{
-      echo "building"
+        when{
+          expression{
+            params.executeCommand
+          }
+        }
+        echo "building"
+          
+      
       }
     }
     stage("deploy.."){
