@@ -11,10 +11,12 @@ pipeline{
     stage("build"){
       steps{
         echo"${GITHUB_CREDENTIALS}"
+        
         withCredentials([
           usernamePassword(credentials:'git',usernameVariable:USER, passwordVariable:PWD)
-        ])
-        echo"${USER}"
+        ]){
+            echo"${USER}"
+        }
       }
     }
   }
