@@ -4,7 +4,7 @@ pipeline{
   stages{
     stage("test.."){
       steps{
-        GITHUB=credentials('git')
+        def GITHUB=credentials('git')
         echo "${GITHUB}"
       }
     }
