@@ -4,7 +4,7 @@ pipeline{
     maven 'Maven1'
   }
   parameters{
-    string(name:'VAR2', defaultValue:'default', description:'variable2')
+    string(name:'VAR2', defaultValue:'enter some value', description:'variable2')
   }
   environment{
     ENV1='environment file'
@@ -21,7 +21,7 @@ pipeline{
       }
       stage("deploying"){
         steps{
-          sh 'mvnclean package'
+          sh 'mvn clean package'
         }
       }
     }
