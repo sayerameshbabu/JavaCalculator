@@ -14,6 +14,16 @@ pipeline{
       steps{
         sh "mvn clean install"
       }
+      stage("testing"){
+        steps{
+          sh 'mvn clean test'
+        }
+      }
+      stage("deploying"){
+        steps{
+          sh 'mvnclean package'
+        }
+      }
     }
   }
 }
