@@ -5,8 +5,9 @@ pipeline{
     stage('init'){
       steps{
         echo "enter init stage commands"
-//        script{
-        GV=load "script1.groovy"
+        script{
+         GV=load "script1.groovy"
+        }
       }
     }
     stage("build"){
