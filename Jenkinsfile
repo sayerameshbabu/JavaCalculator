@@ -10,7 +10,7 @@ pipeline{
   stages{
     stage("build"){
       steps{
-        echo"${GITHUB_CREDENTIALS"
+        echo"${GITHUB_CREDENTIALS}"
       }
     }
   }
