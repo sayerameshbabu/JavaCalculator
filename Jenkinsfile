@@ -36,7 +36,7 @@ pipeline{
     }
     stage("deploy.."){
       steps{
-        echo"$gender of sameera is: {params.SAMEERA}"
+        echo "gender of sameera is: ${params.SAMEERA}"
         echo "deplying"
       }
     }
