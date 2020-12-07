@@ -1,5 +1,8 @@
 pipeline{
   agent any
+  environment{
+    GITHUB_CREDENTIALS=credentials('git')
+  }
   tools{
     maven 'Maven1'
   }
@@ -7,8 +10,7 @@ pipeline{
   stages{
     stage("build"){
       steps{
-        sh "mvn clean install"
-        sh "mvn  clean package"
+        echo"${GITHUB_CREDENTIALS"
       }
     }
   }
