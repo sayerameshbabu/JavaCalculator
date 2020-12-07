@@ -7,7 +7,6 @@ pipeline{
   parameters{
     booleanParam(name:'executeTests',defaultValue:true, description:"enter true or false")
   }
-  }
   stages{
     stage("test.."){
       steps{
