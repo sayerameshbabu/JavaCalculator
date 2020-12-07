@@ -9,10 +9,14 @@ pipeline{
   }
   stages{
     stage("test.."){
+      when{
+        expression{
+          params.executeTests
+        }
+      }
       steps{
         echo "${GITHUB}"
         echo "${DOCKER}"
-        echo "${executeTests}"
       }
     }
     stage("build.."){
