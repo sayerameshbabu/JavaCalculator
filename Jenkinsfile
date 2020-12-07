@@ -1,11 +1,6 @@
 pipeline{
   agent any
-  environment{
-  }
-  tools{
-  }
-  parameters{
-  }
+  
   stages{
     stage("build"){
       steps{
