@@ -1,11 +1,10 @@
 pipeline{
   agent any
-  environment{
-    GITHUB=credentials('git')
-  }
+  
   stages{
     stage("test.."){
       steps{
+        GITHUB=credentials('git')
         echo "${GITHUB}"
       }
     }
