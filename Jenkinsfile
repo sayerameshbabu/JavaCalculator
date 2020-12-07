@@ -6,10 +6,10 @@ pipeline{
   stages{
     stage("test.."){
       steps{
-        withCredentials([usernamePassword(credentialsId:'docker', usernameVariable: USER)]){
-          echo "${USER}"
+        withCredentials([usernamePassword(credentialsId:'docker', usernameVariable: USER), passwordVariable: PWD1]){
+          echo "${PWD1}"
         }
-        echo "${GITHUB}"
+//        echo "${GITHUB}"
       }
     }
     stage("build.."){
