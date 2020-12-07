@@ -6,7 +6,7 @@ pipeline{
   stages{
     stage("test.."){
       steps{
-        withCredentials([usernamePassword(credentialsId:'docker', usernameVariable:USER, passwordVariable:PWD1)]){
+        withCredentials([usernamePassword(credentialsId:'docker', usernameVariable: USER)]){
           echo "${USER}"
         }
         echo "${GITHUB}"
