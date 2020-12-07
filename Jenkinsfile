@@ -21,12 +21,13 @@ pipeline{
       }
     }
     stage("build.."){
-      steps{
-        when{
+       when{
           expression{
             params.executeCommand
           }
         }
+      steps{
+       
         echo "building"
           
       
