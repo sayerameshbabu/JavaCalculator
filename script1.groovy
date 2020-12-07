@@ -1,4 +1,4 @@
 def buildApp(){
-  echo "building"
+  echo "building --- from groovy script"
 }
 return this
