@@ -14,7 +14,7 @@ pipeline{
       
         withCredentials([usernamePassword(credentialsId:'git',usernameVariable:USER,passwordVariable:PWD)]){
           echo "${USER}"
-        }
+        
         }
       }
     }
